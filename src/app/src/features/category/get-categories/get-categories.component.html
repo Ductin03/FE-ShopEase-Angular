@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+      <div class="col-6"><input type="text"></div>
+      <div class="col-6">
+        <button class="btn btn-primary" >Search</button>
+      </div>
+      <div class="col-6">
+        <a>
+          <button class="btn btn-primary"  [routerLink]="['/category/create']">Add</button>
+        </a>
+      
+      </div>
+    </div>
+    <div class="row">
+  
+      <div class="col-12">
+        
+        <app-card [showHeader]="false" blockClass="dashboard-card" *ngIf="data?.length>0">
+          <ngx-datatable 
+          style="margin-top: 20px" 
+          #dataTable 
+          [rows]="data" 
+          [messages]="{
+            emptyMessage: 'No Data Found',
+            totalMessage: 'Total'
+          }" 
+          [rowHeight]="40" 
+          [externalPaging]="true" 
+          [columnMode]="'force'" 
+          [headerHeight]="40"
+          [footerHeight]="40" 
+          [scrollbarH]="true" 
+          [count]="data.length" 
+          class="tailwind-datatable">
+            <ngx-datatable-column name="category Name" prop="categoryName">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+               {{row.categoryName}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="description" prop="price">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.description}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Action">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                  <button type="button" class="btn btn-sm">
+                    <a >
+                      <i antIcon type="edit" theme="outline" [routerLink]="['/category/edit',row.id]"></i>
+                    </a>
+              
+                  </button>
+                  <button type="button" class="btn btn-sm btn-danger">
+                 <a href=""><i  theme="outline"></i> Xóa</a>
+                    
+                 
+                  </button>
+                </ng-template>
+                
+              </ngx-datatable-column>
+
+          </ngx-datatable>
+        </app-card>
+      </div>
+    </div>
+  </div>

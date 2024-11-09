@@ -1,0 +1,21 @@
+.loading-backdrop {
+    position: fixed;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Màu nền tối với hiệu ứng mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    /* Đảm bảo lớp phủ nằm trên các thành phần khác */
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   

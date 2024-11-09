@@ -1,0 +1,106 @@
+/**======================================================================
+=========================================================================
+Template Name: DashboardKit - Most Complete Bootstrap Admin Template
+Author: Phoenixcoded
+Support: support@phoenixcoded.net
+File: style.css
+=========================================================================
+=================================================================================== */
+
+// main framework
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/variables-dark';
+
+@import 'scss/settings/color-variables';
+@import 'scss/settings/theme-variables';
+@import 'scss/settings/bootstrap-variables';
+
+// bootstrap import
+@import 'scss/bootstrap/bootstrap.scss';
+
+@import 'node_modules/bootstrap/scss/utilities';
+@import 'node_modules/bootstrap/scss/utilities/api';
+
+// main framework
+@import 'scss/themes/generic.scss';
+@import 'scss/themes/general.scss';
+
+@import 'scss/themes/components/components.scss';
+
+// theme
+@import 'scss/themes/layouts/menu/sidebar.scss';
+@import 'scss/themes/layouts/navbar/navbar.scss';
+@import 'scss/themes/layouts/pc-common.scss';
+@import 'scss/themes/layouts/breadcrumb/breadcrumb.scss';
+@import 'scss/themes/layouts/footer/footer.scss';
+
+@import 'scss/themes/preset-style.scss';
+
+ngx-datatable {
+    datatable-header {
+      border-bottom: 1px solid #d9d9d9;
+      display: flex;
+      align-items: center;
+  
+      .datatable-header-inner {
+        font-weight: 600;
+      }
+    }
+  
+    .empty-row {
+      margin-top: 10px;
+      text-align: center;
+      // background-image: url('assets/bytepay.png');
+      // background-size: cover;
+    }
+  
+    .empty-row::after {}
+  
+    datatable-body {
+      datatable-body-cell {
+        display: flex;
+        align-items: center;
+  
+        .datatable-body-cell-label {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  
+    datatable-body-row {
+      .datatable-row-center {
+        display: flex;
+        align-items: center;
+      }
+  
+      border-bottom: 1px solid #d9d9d9;
+    }
+  
+    datatable-body-cell {
+      display: flex !important;
+      align-items: center !important;
+    }
+  
+    datatable-pager {
+      .pager {
+        .pages {
+          border: 1px solid $primary;
+  
+          margin-right: 4px !important;
+          text-align: center;
+  
+          a {
+            width: 28px;
+            height: 24px;
+            margin-top: 4px;
+          }
+        }
+  
+        .pages.active {
+          background-color: #cfe2ff;
+        }
+      }
+    }
+  }

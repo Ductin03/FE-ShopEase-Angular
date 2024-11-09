@@ -1,0 +1,29 @@
+<div class="auth-main">
+    <div class="auth-wrapper v3">
+      <div class="auth-form">
+        <div class="auth-header">
+          <a href="javascript:"><img src="assets/images/logo-dark.svg" alt="logo img" /></a>
+        </div>
+        <div class="card my-5">
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()" > 
+              <div class="form-group mb-3">
+
+                <select class="form-select" [(ngModel)]="roleId" aria-label="Default select example" name="roleId" >
+                  <option [value]="''">RoleName</option>           
+                  <option  *ngFor="let item of data" [value]="item.id">{{item.roleName}}</option>           
+                </select>
+                
+                </div>
+                <div class="d-grid mt-3">
+                    <button type="submit" class="btn btn-primary">Request Role</button>
+                  </div>
+
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
